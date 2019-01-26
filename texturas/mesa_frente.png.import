@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/passaro-voa1.png-c6b773e77cc74c8a7f73eb2c8f82d043.stex"
+path="res://.import/mesa_frente.png-b7f47c590ba53614b2af70a8525bd799.stex"
 
 [deps]
 
-source_file="res://texturas/passaro-voa1.png"
-dest_files=[ "res://.import/passaro-voa1.png-c6b773e77cc74c8a7f73eb2c8f82d043.stex" ]
+source_file="res://texturas/mesa_frente.png"
+dest_files=[ "res://.import/mesa_frente.png-b7f47c590ba53614b2af70a8525bd799.stex" ]
 
 [params]
 

@@ -1,20 +1,37 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=30 format=2]
 
-[ext_resource path="res://scripts/interagivel.gd" type="Script" id=1]
+[ext_resource path="res://scripts/godot.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://scripts/PlayerController.gd" type="Script" id=3]
-[ext_resource path="res://addons/mgt/icons/icon_player_base.png" type="Texture" id=4]
-[ext_resource path="res://texturas/passaro.png" type="Texture" id=5]
-[ext_resource path="res://texturas/passaro-voa1.png" type="Texture" id=6]
-[ext_resource path="res://texturas/passaro-voa2.png" type="Texture" id=7]
-[ext_resource path="res://texturas/passaro-voa3.png" type="Texture" id=8]
-[ext_resource path="res://scripts/Gaiola.gd" type="Script" id=9]
-[ext_resource path="res://texturas/gaiola.png" type="Texture" id=10]
-[ext_resource path="res://scripts/Manager.gd" type="Script" id=11]
+[ext_resource path="res://texturas/mesa_tras.png" type="Texture" id=3]
+[ext_resource path="res://texturas/mesa_frente.png" type="Texture" id=4]
+[ext_resource path="res://texturas/estante.png" type="Texture" id=5]
+[ext_resource path="res://scripts/PlayerController.gd" type="Script" id=6]
+[ext_resource path="res://addons/mgt/icons/icon_player_base.png" type="Texture" id=7]
+[ext_resource path="res://texturas/passaro.png" type="Texture" id=8]
+[ext_resource path="res://texturas/passaro-voa1.png" type="Texture" id=9]
+[ext_resource path="res://texturas/passaro-voa2.png" type="Texture" id=10]
+[ext_resource path="res://texturas/passaro-voa3.png" type="Texture" id=11]
+[ext_resource path="res://scripts/Gaiola.gd" type="Script" id=12]
+[ext_resource path="res://texturas/gaiola2.png" type="Texture" id=13]
+[ext_resource path="res://scripts/Manager.gd" type="Script" id=14]
+[ext_resource path="res://texturas/gaiola.png" type="Texture" id=15]
+[ext_resource path="res://texturas/rhino.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=10]
 
 extents = Vector2( 30, 30 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+extents = Vector2( 23.7215, 5.4837 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+extents = Vector2( 27.0236, 1.02718 )
+
+[sub_resource type="RectangleShape2D" id=13]
+
+extents = Vector2( 31.8793, 1.53268 )
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -24,12 +41,12 @@ height = 26.0294
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": false,
 "name": "fly",
 "speed": 4.0
@@ -37,19 +54,19 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=3]
 
-extents = Vector2( 372.914, 6.94977 )
+extents = Vector2( 123.458, 6.94977 )
 
 [sub_resource type="RectangleShape2D" id=4]
 
-extents = Vector2( 365.279, 10 )
+extents = Vector2( 122.603, 3.98529 )
 
 [sub_resource type="RectangleShape2D" id=5]
 
-extents = Vector2( 6.04324, 173.425 )
+extents = Vector2( 2.13324, 93.7273 )
 
 [sub_resource type="RectangleShape2D" id=6]
 
-extents = Vector2( 10, 45.1269 )
+extents = Vector2( 10, 28.7335 )
 
 [sub_resource type="Animation" id=7]
 
@@ -80,7 +97,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.5, 0.5 ), Vector2( 1.5, 1.5 ) ]
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../Gaiola/collisionDir:disabled")
@@ -89,10 +106,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.01 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false, true ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("../Gaiola:position")
@@ -101,10 +118,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 2, 1 ),
 "update": 0,
-"values": [ Vector2( 667.833, 3.42477 ), Vector2( 1155.65, 29.3264 ) ]
+"values": [ Vector2( 667.833, 3.42477 ), Vector2( 1154.96, -86.1492 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("../Gaiola:rotation_degrees")
@@ -113,10 +130,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 2, 1 ),
 "update": 0,
-"values": [ 0.0, 45.187 ]
+"values": [ 0.0, 60.0 ]
 }
 
 [sub_resource type="RectangleShape2D" id=9]
@@ -125,37 +142,73 @@ extents = Vector2( 168.998, 3.42703 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="interagivel" type="Area2D" parent="."]
-position = Vector2( 1915.01, 1556.58 )
-scale = Vector2( 1.54823, 1.51613 )
+[node name="godotrobo" type="Area2D" parent="."]
+position = Vector2( 1114.7, 1553.93 )
 script = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="interagivel"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="godotrobo"]
 shape = SubResource( 10 )
 
-[node name="icon" type="Sprite" parent="interagivel"]
+[node name="arte" type="Sprite" parent="godotrobo"]
 texture = ExtResource( 2 )
+
+[node name="mesa" type="StaticBody2D" parent="."]
+position = Vector2( 922.661, 1096.5 )
+scale = Vector2( 4, 4 )
+
+[node name="mesa_tras" type="Sprite" parent="mesa"]
+show_behind_parent = true
+texture = ExtResource( 3 )
+
+[node name="mesa_frente" type="Sprite" parent="mesa"]
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mesa"]
+position = Vector2( -0.5327, -20.4965 )
+shape = SubResource( 11 )
+
+[node name="estante" type="StaticBody2D" parent="."]
+position = Vector2( 478.793, 966.777 )
+scale = Vector2( 8, 8 )
+
+[node name="arte" type="Sprite" parent="estante"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="estante"]
+position = Vector2( -0.0230026, 12.4632 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="estante"]
+position = Vector2( -0.0230026, -4.49061 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="estante"]
+position = Vector2( -0.0230026, -23.0196 )
+shape = SubResource( 13 )
 
 [node name="Passaro" type="KinematicBody2D" parent="." groups=[
 "player",
 ]]
-position = Vector2( 1149.89, 414.528 )
-script = ExtResource( 3 )
+position = Vector2( 1144.78, 407.376 )
+script = ExtResource( 6 )
 __meta__ = {
-"_editor_icon": ExtResource( 4 )
+"_editor_icon": ExtResource( 7 )
 }
+inventarioPath = NodePath("../CanvasLayer/inventario")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Passaro"]
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="Passaro"]
+position = Vector2( 0, -59.459 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
 limit_left = 0
 limit_top = 0
-drag_margin_left = 0.8
+drag_margin_left = 0.5
 drag_margin_top = 0.5
-drag_margin_right = 0.8
+drag_margin_right = 0.5
 drag_margin_bottom = 0.5
 editor_draw_drag_margin = true
 
@@ -169,37 +222,32 @@ playing = true
 [node name="Gaiola" type="StaticBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( 667.833, 3.42477 )
-script = ExtResource( 9 )
-
-[node name="gaiola" type="Sprite" parent="Gaiola"]
-position = Vector2( 479.627, 280.5 )
-scale = Vector2( 2.98, 3.00833 )
-texture = ExtResource( 10 )
+script = ExtResource( 12 )
 
 [node name="collisionChao" type="CollisionShape2D" parent="Gaiola"]
-position = Vector2( 479.806, 454.03 )
+position = Vector2( 465.146, 443.838 )
 shape = SubResource( 3 )
 
 [node name="collisionTeto" type="CollisionShape2D" parent="Gaiola"]
-position = Vector2( 473.538, 107.304 )
+position = Vector2( 464.393, 271.734 )
 shape = SubResource( 4 )
 
 [node name="collisionEsq" type="CollisionShape2D" parent="Gaiola"]
-position = Vector2( 116.635, 288.089 )
+position = Vector2( 343.019, 356.877 )
 shape = SubResource( 5 )
 
 [node name="collisionDir" type="CollisionShape2D" parent="Gaiola"]
-position = Vector2( 845.604, 282.257 )
+position = Vector2( 586.879, 357.205 )
 shape = SubResource( 5 )
 
 [node name="area1" type="Area2D" parent="Gaiola"]
-position = Vector2( 131.798, 401.225 )
+position = Vector2( 352.717, 404.542 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gaiola/area1"]
 shape = SubResource( 6 )
 
 [node name="area2" type="Area2D" parent="Gaiola"]
-position = Vector2( 826.943, 401.225 )
+position = Vector2( 576.836, 404.159 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gaiola/area2"]
 shape = SubResource( 6 )
@@ -207,10 +255,16 @@ shape = SubResource( 6 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Gaiola"]
 anims/shake = SubResource( 7 )
 
+[node name="gaiola2" type="Sprite" parent="Gaiola"]
+position = Vector2( 464.904, 322.282 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 13 )
+
 [node name="Manager" type="Node2D" parent="." groups=[
 "manager",
 ]]
-script = ExtResource( 11 )
+editor/display_folded = true
+script = ExtResource( 14 )
 playerPath = NodePath("../Passaro")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Manager"]
@@ -221,11 +275,24 @@ position = Vector2( 1143.36, 628.316 )
 scale = Vector2( 9.09486, 10.3996 )
 
 [node name="arte" type="Sprite" parent="sala"]
-position = Vector2( 47.5916, 22.844 )
-scale = Vector2( 1.38073, 1.38073 )
-texture = ExtResource( 10 )
+position = Vector2( 47.5916, 0.00571677 )
+scale = Vector2( 1.38073, 1.00009 )
+texture = ExtResource( 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sala"]
-position = Vector2( 47.1567, 102.175 )
+position = Vector2( 47.1567, 58.3756 )
 shape = SubResource( 9 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="inventario" type="HBoxContainer" parent="CanvasLayer"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -64.0
+
+[node name="rhino" type="Sprite" parent="."]
+position = Vector2( 504.25, 473.242 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 16 )
 

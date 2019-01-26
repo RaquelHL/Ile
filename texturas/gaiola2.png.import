@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/passaro-voa1.png-c6b773e77cc74c8a7f73eb2c8f82d043.stex"
+path="res://.import/gaiola2.png-77e1282246a8f8390d28a5a476b441af.stex"
 
 [deps]
 
-source_file="res://texturas/passaro-voa1.png"
-dest_files=[ "res://.import/passaro-voa1.png-c6b773e77cc74c8a7f73eb2c8f82d043.stex" ]
+source_file="res://texturas/gaiola2.png"
+dest_files=[ "res://.import/gaiola2.png-77e1282246a8f8390d28a5a476b441af.stex" ]
 
 [params]
 

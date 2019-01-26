@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/passaro-voa1.png-c6b773e77cc74c8a7f73eb2c8f82d043.stex"
+path="res://.import/rhino.png-d78eaa4729350d9afca3f0b712a7c2fe.stex"
 
 [deps]
 
-source_file="res://texturas/passaro-voa1.png"
-dest_files=[ "res://.import/passaro-voa1.png-c6b773e77cc74c8a7f73eb2c8f82d043.stex" ]
+source_file="res://texturas/rhino.png"
+dest_files=[ "res://.import/rhino.png-d78eaa4729350d9afca3f0b712a7c2fe.stex" ]
 
 [params]
 

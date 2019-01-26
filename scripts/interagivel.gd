@@ -1,7 +1,11 @@
 extends CollisionObject2D
 
+class_name Interagivel
+
 var scnDialogo = preload("res://scenes/dialogo.tscn")
 var manager
+
+var textura
 
 var foco = false
 
@@ -12,13 +16,13 @@ func _ready():
 	pass # Replace with function body.
 
 func mouse_enter():
-	$icon.scale = Vector2(1.1,1.1)
+	$arte.scale = Vector2(1.1,1.1)
 	foco = true
 	print("entrou")
 	pass
 	
 func mouse_exit():
-	$icon.scale = Vector2(1.0,1.0)
+	$arte.scale = Vector2(1.0,1.0)
 	foco = false
 	print("saiu")
 	pass
@@ -27,11 +31,16 @@ func mouse_exit():
 func _input(event):
 	if(event is InputEventMouseButton and foco and event.pressed):
 		print("clicou")
-		interage()
+		var dist = (manager.player.position - self.position).length()
+		print(dist)
+		if(dist<100):
+			interage_perto()
+		else:
+			interage_longe()
 		get_tree().set_input_as_handled()
 
-func interage():
-	var dialogo = scnDialogo.instance()
-	dialogo.alvo = manager.player
-	dialogo.texto = "Aquele é o robozinho do Godot"
-	dialogo.play()
+func interage_perto():
+	pass
+
+func interage_longe():
+	pass

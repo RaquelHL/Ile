@@ -19,7 +19,7 @@ export(String) var _powerups_container_name = "Powerups"
 
 func _ready():
 	# check if there is a state container for a FSM
-	_states_container = get_node(_states_container_name)
+	"""_states_container = get_node(_states_container_name)
 	if _states_container :
 		# Register all the states into the states container
 		for state in _states_container.get_children():
@@ -29,7 +29,7 @@ func _ready():
 	if _powerups_container:
 		for powerup in _powerups_container.get_children():
 			register_powerup(powerup)
-	
+	"""
 	add_to_group("can_trigger_access")
 
 func _process(delta):

@@ -4,7 +4,7 @@ extends EditorPlugin
 var dock
 
 func _enter_tree():
-	get_tree().connect("node_added", self, "_on_SceneTree_node_added")
+	#get_tree().connect("node_added", self, "_on_SceneTree_node_added")
 	
 	add_custom_type("PlayerBase", "KinematicBody2D", preload("custom_nodes/mgt_player_base.gd"), preload("icons/icon_player_base.png"))
 	#add_custom_type("SaveSystem", "Node", preload("custom_nodes/mgt_save_system.gd"), preload("icons/icon_save_system.png"))

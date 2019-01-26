@@ -2,6 +2,7 @@ extends "res://addons/mgt/custom_nodes/mgt_player_base.gd"
 
 
 func _ready():
+	
 	pass # Replace with function body.
 
 func _physics_process(delta):
@@ -12,4 +13,10 @@ func _physics_process(delta):
 	jump_just_pressed = Input.is_action_pressed("pulo")
 	
 	#get_slide_collision()
-#	pass
+	
+	if(current_speed.x>0):
+		$AnimatedSprite.flip_h = false
+	else:
+		if(current_speed.x<0):
+			$AnimatedSprite.flip_h = true
+#	

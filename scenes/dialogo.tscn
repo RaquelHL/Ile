@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://texturas/dialogo.png" type="Texture" id=1]
+[ext_resource path="res://scripts/dialogo.gd" type="Script" id=2]
+
+[node name="dialogo" type="Sprite"]
+editor/display_folded = true
+position = Vector2( 1278.09, 240.74 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = -93.0
+margin_top = -25.0
+margin_right = 93.0
+margin_bottom = 19.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Aquilo é um novelo de lã"
+scroll_active = false
+
+[node name="Tween" type="Tween" parent="."]
+

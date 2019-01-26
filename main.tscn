@@ -1,34 +1,44 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Gaiola.gd" type="Script" id=1]
-[ext_resource path="res://gaiola.png" type="Texture" id=2]
-[ext_resource path="res://PlayerController.gd" type="Script" id=3]
-[ext_resource path="res://addons/mgt/icons/icon_player_base.png" type="Texture" id=4]
-[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://scripts/PlayerController.gd" type="Script" id=1]
+[ext_resource path="res://addons/mgt/icons/icon_player_base.png" type="Texture" id=2]
+[ext_resource path="res://texturas/passaro.png" type="Texture" id=3]
+[ext_resource path="res://scripts/Gaiola.gd" type="Script" id=4]
+[ext_resource path="res://texturas/gaiola.png" type="Texture" id=5]
+[ext_resource path="res://scripts/Manager.gd" type="Script" id=6]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=1]
 
-extents = Vector2( 372.914, 7.5271 )
+radius = 20.7441
+height = 26.0294
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="SpriteFrames" id=2]
 
-extents = Vector2( 365.279, 10 )
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=3]
 
-extents = Vector2( 6.04324, 173.425 )
+extents = Vector2( 372.914, 6.94977 )
 
 [sub_resource type="RectangleShape2D" id=4]
 
-extents = Vector2( 10, 45.1269 )
+extents = Vector2( 365.279, 10 )
 
 [sub_resource type="RectangleShape2D" id=5]
 
-extents = Vector2( 31.7949, 30.5389 )
+extents = Vector2( 6.04324, 173.425 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="RectangleShape2D" id=6]
 
-resource_name = "shake"
+extents = Vector2( 10, 45.1269 )
+
+[sub_resource type="Animation" id=7]
+
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -40,63 +50,155 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( 667.833, 3.42477 ), Vector2( 660, 3.425 ), Vector2( 675, 3.425 ), Vector2( 667.833, 3.42477 ) ]
 }
+
+[sub_resource type="Animation" id=8]
+
+resource_name = "ato1-2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Passaro/Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 3, 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Gaiola/collisionDir:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Gaiola:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 2, 1 ),
+"update": 0,
+"values": [ Vector2( 667.833, 3.42477 ), Vector2( 1155.65, 29.3264 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Gaiola:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 2, 1 ),
+"update": 0,
+"values": [ 0.0, 45.187 ]
+}
+
+[sub_resource type="RectangleShape2D" id=9]
+
+extents = Vector2( 168.998, 3.42703 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Gaiola" type="StaticBody2D" parent="."]
+[node name="Passaro" type="KinematicBody2D" parent="." groups=[
+"player",
+]]
+position = Vector2( 1149.89, 414.528 )
 script = ExtResource( 1 )
+__meta__ = {
+"_editor_icon": ExtResource( 2 )
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Passaro"]
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="Passaro"]
+current = true
+limit_left = 0
+limit_top = 0
+drag_margin_left = 0.8
+drag_margin_top = 0.5
+drag_margin_right = 0.8
+drag_margin_bottom = 0.5
+editor_draw_drag_margin = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Passaro"]
+position = Vector2( 0, -0.277374 )
+scale = Vector2( 4, 4 )
+frames = SubResource( 2 )
+animation = "idle"
+
+[node name="Gaiola" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 667.833, 3.42477 )
+script = ExtResource( 4 )
 
 [node name="gaiola" type="Sprite" parent="Gaiola"]
 position = Vector2( 479.627, 280.5 )
 scale = Vector2( 2.98, 3.00833 )
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gaiola"]
-position = Vector2( 479.684, 453.053 )
-shape = SubResource( 1 )
+[node name="collisionChao" type="CollisionShape2D" parent="Gaiola"]
+position = Vector2( 479.806, 454.03 )
+shape = SubResource( 3 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Gaiola"]
+[node name="collisionTeto" type="CollisionShape2D" parent="Gaiola"]
 position = Vector2( 473.538, 107.304 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Gaiola"]
+[node name="collisionEsq" type="CollisionShape2D" parent="Gaiola"]
 position = Vector2( 116.635, 288.089 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Gaiola"]
+[node name="collisionDir" type="CollisionShape2D" parent="Gaiola"]
 position = Vector2( 845.604, 282.257 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="area1" type="Area2D" parent="Gaiola"]
 position = Vector2( 131.798, 401.225 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gaiola/area1"]
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="area2" type="Area2D" parent="Gaiola"]
 position = Vector2( 826.943, 401.225 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gaiola/area2"]
-shape = SubResource( 4 )
-
-[node name="Passaro" type="KinematicBody2D" parent="Gaiola" groups=[
-"player",
-]]
-position = Vector2( 496.027, 304.257 )
-script = ExtResource( 3 )
-__meta__ = {
-"_editor_icon": ExtResource( 4 )
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gaiola/Passaro"]
-shape = SubResource( 5 )
-
-[node name="icon" type="Sprite" parent="Gaiola/Passaro"]
-position = Vector2( 0, -2 )
-texture = ExtResource( 5 )
+shape = SubResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Gaiola"]
-anims/shake = SubResource( 6 )
+anims/shake = SubResource( 7 )
+
+[node name="Manager" type="Node2D" parent="." groups=[
+"manager",
+]]
+script = ExtResource( 6 )
+playerPath = NodePath("../Passaro")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Manager"]
+anims/ato1-2 = SubResource( 8 )
+
+[node name="sala" type="StaticBody2D" parent="."]
+position = Vector2( 1143.36, 628.316 )
+scale = Vector2( 9.09486, 10.3996 )
+
+[node name="arte" type="Sprite" parent="sala"]
+position = Vector2( 47.5916, 22.844 )
+scale = Vector2( 1.38073, 1.38073 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sala"]
+position = Vector2( 47.1567, 102.175 )
+shape = SubResource( 9 )
 

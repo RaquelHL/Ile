@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gaiola.png-def4bb660b4e7c6530c11fb7860785d2.stex"
+path="res://.import/dialogo.png-522712737d2faf2553e356c84977490a.stex"
 
 [deps]
 
-source_file="res://gaiola.png"
-dest_files=[ "res://.import/gaiola.png-def4bb660b4e7c6530c11fb7860785d2.stex" ]
+source_file="res://texturas/dialogo.png"
+dest_files=[ "res://.import/dialogo.png-522712737d2faf2553e356c84977490a.stex" ]
 
 [params]
 
@@ -17,7 +17,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

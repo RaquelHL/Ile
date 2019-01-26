@@ -4,8 +4,8 @@
 [ext_resource path="res://scripts/dialogo.gd" type="Script" id=2]
 
 [node name="dialogo" type="Sprite"]
-editor/display_folded = true
-position = Vector2( 1278.09, 240.74 )
+position = Vector2( 163.7, 50.908 )
+scale = Vector2( 1.62806, 1.62806 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 

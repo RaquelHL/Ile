@@ -1,0 +1,102 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Gaiola.gd" type="Script" id=1]
+[ext_resource path="res://gaiola.png" type="Texture" id=2]
+[ext_resource path="res://PlayerController.gd" type="Script" id=3]
+[ext_resource path="res://addons/mgt/icons/icon_player_base.png" type="Texture" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+extents = Vector2( 372.914, 7.5271 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+extents = Vector2( 365.279, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+extents = Vector2( 6.04324, 173.425 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+extents = Vector2( 10, 45.1269 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+extents = Vector2( 31.7949, 30.5389 )
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "shake"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( 0, 0 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Gaiola" type="StaticBody2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="gaiola" type="Sprite" parent="Gaiola"]
+position = Vector2( 479.627, 280.5 )
+scale = Vector2( 2.98, 3.00833 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gaiola"]
+position = Vector2( 479.684, 453.053 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Gaiola"]
+position = Vector2( 473.538, 107.304 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Gaiola"]
+position = Vector2( 116.635, 288.089 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Gaiola"]
+position = Vector2( 845.604, 282.257 )
+shape = SubResource( 3 )
+
+[node name="area1" type="Area2D" parent="Gaiola"]
+position = Vector2( 131.798, 401.225 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gaiola/area1"]
+shape = SubResource( 4 )
+
+[node name="area2" type="Area2D" parent="Gaiola"]
+position = Vector2( 826.943, 401.225 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gaiola/area2"]
+shape = SubResource( 4 )
+
+[node name="Passaro" type="KinematicBody2D" parent="Gaiola" groups=[
+"player",
+]]
+position = Vector2( 496.027, 304.257 )
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_icon": ExtResource( 4 )
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gaiola/Passaro"]
+shape = SubResource( 5 )
+
+[node name="icon" type="Sprite" parent="Gaiola/Passaro"]
+position = Vector2( 0, -2 )
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gaiola"]
+anims/shake = SubResource( 6 )
+

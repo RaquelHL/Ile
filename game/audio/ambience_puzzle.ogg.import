@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ambience_puzzle.ogg-398156a9728446ed7c5221330286e8b7.oggstr"
+
+[deps]
+
+source_file="res://game/audio/ambience_puzzle.ogg"
+dest_files=[ "res://.import/ambience_puzzle.ogg-398156a9728446ed7c5221330286e8b7.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

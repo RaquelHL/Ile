@@ -1,0 +1,203 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://game/images/bg/bgMainMenu.png" type="Texture" id=1]
+[ext_resource path="res://game/audio/birds_menu_theme.wav" type="AudioStream" id=2]
+[ext_resource path="res://game/audio/enemyFlyingAlt_1.ogg" type="AudioStream" id=3]
+[ext_resource path="res://game/audio/sfx/mouse_sfx.wav" type="AudioStream" id=4]
+[ext_resource path="res://game/scripts/mainMenuControl.gd" type="Script" id=5]
+[ext_resource path="res://game/images/buttons/button_creditos.png" type="Texture" id=6]
+[ext_resource path="res://game/images/buttons/btn_opcoes.png" type="Texture" id=7]
+[ext_resource path="res://game/images/buttons/button_close.png" type="Texture" id=8]
+[ext_resource path="res://game/images/bg/bgSol.png" type="Texture" id=9]
+[ext_resource path="res://game/images/bg/mainScreen_logo.png" type="Texture" id=10]
+[ext_resource path="res://game/images/bg/mainScreen_montanhas.png" type="Texture" id=11]
+[ext_resource path="res://game/images/buttons/btn_jogar.png" type="Texture" id=12]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Sun"
+length = 10.0
+step = 0.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/Sol:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 184, 204 ), Vector2( 184, 154 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/Sol:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/Logo:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/btInfo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 4, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/btConfig:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 4, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control/btStart:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 4, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="MarginContainer" type="MarginContainer"]
+margin_right = 480.0
+margin_bottom = 240.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Sun"
+anims/Sun = SubResource( 1 )
+
+[node name="bgMain" type="TextureRect" parent="."]
+margin_right = 480.0
+margin_bottom = 240.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="introMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -10.0
+
+[node name="musicMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -5.0
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 480.0
+margin_bottom = 240.0
+script = ExtResource( 5 )
+
+[node name="btInfo" type="TextureButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 20.0
+margin_top = 18.5141
+margin_right = 106.0
+margin_bottom = 42.5141
+texture_normal = ExtResource( 6 )
+
+[node name="btConfig" type="TextureButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -87.0
+margin_top = 19.2601
+margin_right = -20.0
+margin_bottom = 38.2601
+texture_normal = ExtResource( 7 )
+
+[node name="btExit" type="TextureButton" parent="Control"]
+visible = false
+margin_left = 424.035
+margin_top = 68.7412
+margin_right = 464.035
+margin_bottom = 101.741
+texture_normal = ExtResource( 8 )
+expand = true
+
+[node name="Sol" type="TextureRect" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -56.0
+margin_top = 64.0
+margin_right = 56.0
+margin_bottom = 176.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Logo" type="TextureRect" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -49.5
+margin_top = -74.8033
+margin_right = 49.5
+margin_bottom = -7.80328
+texture = ExtResource( 10 )
+expand = true
+
+[node name="Montanhas" type="TextureRect" parent="Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -240.0
+margin_top = -70.0
+margin_right = 240.0
+margin_bottom = 30.0
+texture = ExtResource( 11 )
+expand = true
+
+[node name="btStart" type="TextureButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -35.0
+margin_top = 8.05389
+margin_right = 35.0
+margin_bottom = 27.0539
+texture_normal = ExtResource( 12 )
+
+[connection signal="finished" from="introMenu" to="Control" method="_on_musicMenu_finished"]
+[connection signal="pressed" from="Control/btInfo" to="Control" method="buttonInfo"]
+[connection signal="pressed" from="Control/btConfig" to="Control" method="buttonConfiguration"]
+[connection signal="pressed" from="Control/btExit" to="Control" method="exitGame"]
+[connection signal="pressed" from="Control/btStart" to="Control" method="startGame"]

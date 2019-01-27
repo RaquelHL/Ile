@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shot.wav-9b1f4ff893a3256eed5ed8288df0a745.sample"
+
+[deps]
+
+source_file="res://game/audio/sfx/shot.wav"
+dest_files=[ "res://.import/shot.wav-9b1f4ff893a3256eed5ed8288df0a745.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

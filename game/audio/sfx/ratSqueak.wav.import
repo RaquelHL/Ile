@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ratSqueak.wav-d74f701ab9e5470a37477b256ea641b1.sample"
+
+[deps]
+
+source_file="res://game/audio/sfx/ratSqueak.wav"
+dest_files=[ "res://.import/ratSqueak.wav-d74f701ab9e5470a37477b256ea641b1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,7 +1,8 @@
-extends CollisionObject2D
+extends Area2D
 
 class_name Interagivel
 
+onready var config = get_node("/root/config")
 var scnDialogo = preload("res://scenes/dialogo.tscn")
 var manager
 var interacao_curta_distancia = 50
@@ -11,6 +12,7 @@ var textura
 var foco = false
 
 func _ready():
+	#config.click = get_parent().get_node("Click")
 	manager = get_tree().get_nodes_in_group("manager")[0]
 	connect("mouse_entered", self, "mouse_enter")
 	connect("mouse_exited", self, "mouse_exit")
@@ -38,6 +40,7 @@ func _input(event):
 		else:
 			interage_longe()
 		
+		config.playClick()
 		get_tree().set_input_as_handled()
 
 func interage_perto():

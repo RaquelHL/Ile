@@ -5,6 +5,7 @@ func _ready():
 	pass # Replace with function body.
 
 func dialogo_introducao():
+	
 	var dialogo = scnDialogo.instance()
 	var falas = [
 		dialogo.Fala.new(self, "Bom dia..."),

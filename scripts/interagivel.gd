@@ -31,7 +31,7 @@ func mouse_exit():
 func _input(event):
 	if(event is InputEventMouseButton and foco and event.pressed) and not manager.interagindo:
 		print("clicou")
-		var dist = (manager.player.position - self.position).length()
+		var dist = (manager.player.global_position - self.global_position).length()
 		print(dist)
 		if(dist<interacao_curta_distancia):
 			interage_perto()

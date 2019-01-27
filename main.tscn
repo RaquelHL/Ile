@@ -1,110 +1,348 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=86 format=2]
 
-[ext_resource path="res://texturas/fundo.png" type="Texture" id=1]
-[ext_resource path="res://texturas/porta.png" type="Texture" id=2]
-[ext_resource path="res://texturas/janela1.png" type="Texture" id=3]
-[ext_resource path="res://texturas/janela2.png" type="Texture" id=4]
-[ext_resource path="res://texturas/janela3.png" type="Texture" id=5]
-[ext_resource path="res://texturas/mesa_tras.png" type="Texture" id=6]
-[ext_resource path="res://texturas/mesa_frente.png" type="Texture" id=7]
-[ext_resource path="res://texturas/poltrona.png" type="Texture" id=8]
-[ext_resource path="res://texturas/estante.png" type="Texture" id=9]
-[ext_resource path="res://scripts/PlayerController.gd" type="Script" id=10]
-[ext_resource path="res://addons/mgt/icons/icon_player_base.png" type="Texture" id=11]
-[ext_resource path="res://texturas/passaro.png" type="Texture" id=12]
-[ext_resource path="res://texturas/passaro-anda1.png" type="Texture" id=13]
-[ext_resource path="res://texturas/passaro-anda-2.png" type="Texture" id=14]
-[ext_resource path="res://texturas/passaro-voa1.png" type="Texture" id=15]
-[ext_resource path="res://texturas/passaro-voa2.png" type="Texture" id=16]
-[ext_resource path="res://texturas/passaro-voa3.png" type="Texture" id=17]
-[ext_resource path="res://scripts/Gaiola.gd" type="Script" id=18]
-[ext_resource path="res://texturas/gaiola2.png" type="Texture" id=19]
-[ext_resource path="res://scripts/Manager.gd" type="Script" id=20]
-[ext_resource path="res://texturas/rhino.png" type="Texture" id=21]
-[ext_resource path="res://rato1.gd" type="Script" id=22]
-[ext_resource path="res://texturas/RATO.png" type="Texture" id=23]
-[ext_resource path="res://area-anim-gato.gd" type="Script" id=24]
-[ext_resource path="res://scripts/gato.gd" type="Script" id=25]
-[ext_resource path="res://texturas/gato-idle.png" type="Texture" id=26]
-[ext_resource path="res://texturas/gato-deitado.png" type="Texture" id=27]
-[ext_resource path="res://texturas/gato-anda 1.png" type="Texture" id=28]
-[ext_resource path="res://texturas/gato-anda 2.png" type="Texture" id=29]
-[ext_resource path="res://texturas/gato-anda 3.png" type="Texture" id=30]
-[ext_resource path="res://texturas/gato-anda 4.png" type="Texture" id=31]
-[ext_resource path="res://scripts/novelo.gd" type="Script" id=32]
-[ext_resource path="res://texturas/novelo_de_la.png" type="Texture" id=33]
+[ext_resource path="res://texturas/passaro-voa1.png" type="Texture" id=1]
+[ext_resource path="res://texturas/passaro-voa2.png" type="Texture" id=2]
+[ext_resource path="res://texturas/passaro-voa3.png" type="Texture" id=3]
+[ext_resource path="res://texturas/passaro.png" type="Texture" id=4]
+[ext_resource path="res://scripts/Manager.gd" type="Script" id=5]
+[ext_resource path="res://texturas/fundo.png" type="Texture" id=6]
+[ext_resource path="res://porta.gd" type="Script" id=7]
+[ext_resource path="res://texturas/porta.png" type="Texture" id=8]
+[ext_resource path="res://texturas/porta2.png" type="Texture" id=9]
+[ext_resource path="res://texturas/lixeira.png" type="Texture" id=10]
+[ext_resource path="res://texturas/janela1.png" type="Texture" id=11]
+[ext_resource path="res://texturas/janela2.png" type="Texture" id=12]
+[ext_resource path="res://texturas/janela3.png" type="Texture" id=13]
+[ext_resource path="res://texturas/trava_janela.png" type="Texture" id=14]
+[ext_resource path="res://texturas/cabo_janela.png" type="Texture" id=15]
+[ext_resource path="res://texturas/mesa_tras.png" type="Texture" id=16]
+[ext_resource path="res://texturas/mesa_frente.png" type="Texture" id=17]
+[ext_resource path="res://texturas/poltrona.png" type="Texture" id=18]
+[ext_resource path="res://texturas/estante-fechada.png" type="Texture" id=19]
+[ext_resource path="res://texturas/rhino.png" type="Texture" id=20]
+[ext_resource path="res://rato1.gd" type="Script" id=21]
+[ext_resource path="res://texturas/rato-fala.png" type="Texture" id=22]
+[ext_resource path="res://area-anim-gato.gd" type="Script" id=23]
+[ext_resource path="res://texturas/espingarda.png" type="Texture" id=24]
+[ext_resource path="res://texturas/cabideiro.png" type="Texture" id=25]
+[ext_resource path="res://texturas/sofa.png" type="Texture" id=26]
+[ext_resource path="res://texturas/relogio.png" type="Texture" id=27]
+[ext_resource path="res://scripts/novelo.gd" type="Script" id=28]
+[ext_resource path="res://texturas/novelo_de_la.png" type="Texture" id=29]
+[ext_resource path="res://scripts/gato.gd" type="Script" id=30]
+[ext_resource path="res://texturas/gato-idle.png" type="Texture" id=31]
+[ext_resource path="res://texturas/gato-anda 4.png" type="Texture" id=32]
+[ext_resource path="res://texturas/gato-anda 3.png" type="Texture" id=33]
+[ext_resource path="res://texturas/gato-anda 2.png" type="Texture" id=34]
+[ext_resource path="res://texturas/gato-anda 1.png" type="Texture" id=35]
+[ext_resource path="res://texturas/gato-deitado.png" type="Texture" id=36]
+[ext_resource path="res://texturas/porta-anim1.png" type="Texture" id=37]
+[ext_resource path="res://texturas/porta-anim2.png" type="Texture" id=38]
+[ext_resource path="res://texturas/porta-anim3.png" type="Texture" id=39]
+[ext_resource path="res://scripts/PlayerController.gd" type="Script" id=40]
+[ext_resource path="res://addons/mgt/icons/icon_player_base.png" type="Texture" id=41]
+[ext_resource path="res://texturas/passaro-anda1.png" type="Texture" id=42]
+[ext_resource path="res://texturas/passaro-anda-2.png" type="Texture" id=43]
+[ext_resource path="res://scripts/Gaiola.gd" type="Script" id=44]
+[ext_resource path="res://texturas/gaiola2.png" type="Texture" id=45]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=35]
 
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "default",
+"name": "voando",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "parado",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="Animation" id=36]
 
-extents = Vector2( 23.7215, 5.4837 )
-
-[sub_resource type="RectangleShape2D" id=3]
-
-extents = Vector2( 31.8793, 1.53268 )
-
-[sub_resource type="CapsuleShape2D" id=4]
-
-radius = 3.99078
-height = 8.01843
-
-[sub_resource type="SpriteFrames" id=5]
-
-animations = [ {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
-"loop": false,
-"name": "fly",
-"speed": 4.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=6]
-
-extents = Vector2( 31, 1.99995 )
-
-[sub_resource type="RectangleShape2D" id=7]
-
-extents = Vector2( 32, 1.99998 )
-
-[sub_resource type="RectangleShape2D" id=8]
-
-extents = Vector2( 1, 23 )
-
-[sub_resource type="RectangleShape2D" id=9]
-
-extents = Vector2( 2.99997, 15 )
-
-[sub_resource type="Animation" id=10]
-
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("gaiola2:position")
+resource_name = "passaro1_chegando"
+length = 5.0
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"points": PoolRealArray( -87, -0.25, 0, 0.25, 0, -39.2188, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -20, -0.25, 0, 0.25, 0, 25.4031, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0, 0 ), Vector2( 1, 0 ), Vector2( -1, 0 ), Vector2( 0, 0 ) ]
+"values": [ "voando", "parado" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../janela/travaJanela:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1, -3 ), Vector2( -1, -4 ), Vector2( -1, -3 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../janela/travaJanela:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=37]
+
+resource_name = "passaro1_chegando"
+length = 5.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 120, -0.25, 0, 0.25, 0, 30, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -20, -0.25, 0, 0.25, 0, 25.4031, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "voando", "parado" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../../janela/travaJanela:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1, -3 ), Vector2( -1, -4 ), Vector2( -1, -3 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../../janela/travaJanela:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=38]
+
+resource_name = "passaro1_chegando"
+length = 5.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -130, -0.25, 0, 0.25, 0, -39.2188, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -20, -0.25, 0, 0.25, 0, 25.4031, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "voando", "parado" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../../janela/travaJanela:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1, -3 ), Vector2( -1, -5 ), Vector2( -1, -3 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../../janela/travaJanela:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=41]
+
+resource_name = "passaro1_chegando"
+length = 5.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 120, -0.25, 0, 0.25, 0, 30, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -20, -0.25, 0, 0.25, 0, 25.4031, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "voando", "parado" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../../janela/travaJanela:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 1.2 ),
+"transitions": PoolRealArray( 0.68302, 1.31951, 1 ),
+"update": 0,
+"values": [ Vector2( -1, -3 ), Vector2( -23, -19 ), Vector2( -82, 235 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../../janela/travaJanela:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -60.0, -230.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../../janela/AnimatedSprite:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "abrir" ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("../../../janela/cabo_janela")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath("../../../janela/cabo_janela2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -116,7 +354,7 @@ tracks/0/path = NodePath("../EixoRato/rato:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/keys = {
 "times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 0.482968, 0.170755 ),
@@ -130,7 +368,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 2 ),
+"times": PoolRealArray( 1 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -151,7 +389,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.8, 0.8 ) ]
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.7, 0.7 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../GaiolaEixo/Gaiola/collisionDir:disabled")
@@ -172,17 +410,17 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( -52, 0 ) ]
+"values": [  ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("../EixoRato/rato/arte:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
-tracks/3/enabled = true
+tracks/3/enabled = false
 tracks/3/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -220,6 +458,238 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 0.4, 0.628948, 0.855282, 1.33407 )
 }
 
+[sub_resource type="Animation" id=33]
+
+resource_name = "espingarda_atirando"
+length = 2.2
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("../EixoEspingarda:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 49, -0.25, 0, 0.25, 0, 40, -0.25, 0, 0.25, 0, 49, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.8 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("../EixoEspingarda:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -16, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.8 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("../EixoRelogio:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 1.0696, 11.7052, 62.4552, -0.131923, 8.55966, 0.25, 0 ),
+"times": PoolRealArray( 0.9, 2 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../EixoRelogio/relogio/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath(".:parte")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="RectangleShape2D" id=34]
+
+extents = Vector2( 2, 110 )
+
+[sub_resource type="RectangleShape2D" id=25]
+
+extents = Vector2( 3, 10 )
+
+[sub_resource type="Animation" id=26]
+
+resource_name = "anim"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("arte:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 2.8, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../gato:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 274, 282 ), Vector2( 62, 282 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../gato/arte:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../gato/arte:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "walk", "idle" ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Manager:interagindo")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Passaro:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.0128572, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.8, 2.2, 2.8, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -34, 289 ), Vector2( -39, 287 ), Vector2( -36, 290 ), Vector2( -42, 286 ), Vector2( -37, 292 ), Vector2( -43, 286 ), Vector2( -36, 292 ), Vector2( -36, 292 ), Vector2( -16, 292 ), Vector2( -43, 286 ), Vector2( -31, 292 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Passaro/AnimatedSprite:flip_h")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.8, 2.2, 3.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath("../gato")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "dialogo_desespero"
+} ]
+}
+
+[sub_resource type="RectangleShape2D" id=24]
+
+extents = Vector2( 8, 1.00137 )
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "fechado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "abrir",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=39]
+
+extents = Vector2( 10, 3 )
+
+[sub_resource type="RectangleShape2D" id=40]
+
+extents = Vector2( 11, 4 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+extents = Vector2( 23.7215, 5.4837 )
+
+[sub_resource type="RectangleShape2D" id=28]
+
+extents = Vector2( 27, 2 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+extents = Vector2( 31.8793, 1.53268 )
+
 [sub_resource type="RectangleShape2D" id=13]
 
 extents = Vector2( 348, 3.42703 )
@@ -240,30 +710,127 @@ radius = 5.80562
 
 extents = Vector2( 6, 39 )
 
-[sub_resource type="RectangleShape2D" id=21]
+[sub_resource type="RectangleShape2D" id=31]
 
-extents = Vector2( 15, 10 )
+extents = Vector2( 4, 2.99998 )
+
+[sub_resource type="RectangleShape2D" id=27]
+
+extents = Vector2( 4, 2 )
+
+[sub_resource type="RectangleShape2D" id=32]
+
+extents = Vector2( 81, 1 )
+
+[sub_resource type="RectangleShape2D" id=30]
+
+extents = Vector2( 10, 63 )
+
+[sub_resource type="CircleShape2D" id=21]
+
+radius = 7.0
+
+[sub_resource type="Animation" id=23]
+
+resource_name = "cair"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.00233994, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1.27456, 1 ),
+"update": 0,
+"values": [ Vector2( 11, 0 ), Vector2( 31, 0 ), Vector2( 44, 53 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.00233994, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 99.2158, 140.12 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../gato:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -6, 282 ), Vector2( 288, 282 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../gato/arte:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "walk", "deitado" ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../gato/StaticBody2D/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../Manager:interagindo")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="RectangleShape2D" id=18]
+
+extents = Vector2( 15, 7 )
 
 [sub_resource type="SpriteFrames" id=19]
 
 animations = [ {
-"frames": [ ExtResource( 26 ) ],
+"frames": [ ExtResource( 31 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 27 ) ],
-"loop": true,
-"name": "deitado",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "deitado",
+"speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=20]
 
 resource_name = "gato_entra"
 length = 2.0
@@ -303,69 +870,527 @@ tracks/2/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("arte:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../porta/arte:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 38 ), ExtResource( 37 ), ExtResource( 8 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../porta/arte:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1, 1.2, 1.4, 1.6, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -46.5128, 220 ), Vector2( -44, 220 ), Vector2( -42, 220 ), Vector2( -44, 220 ), Vector2( -46.5128, 220 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("arte:z_index")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ -10, 0 ]
+}
 
-[sub_resource type="CircleShape2D" id=20]
+[sub_resource type="RectangleShape2D" id=22]
 
-radius = 7.0
+extents = Vector2( 2, 26 )
+
+[sub_resource type="RectangleShape2D" id=29]
+
+extents = Vector2( 4, 6 )
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 42 ), ExtResource( 43 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "fly",
+"speed": 4.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+
+extents = Vector2( 31, 1.99995 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+extents = Vector2( 32, 1.99998 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+extents = Vector2( 1, 23 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+extents = Vector2( 2.99997, 15 )
+
+[sub_resource type="Animation" id=10]
+
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("gaiola2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 0 ), Vector2( -1, 0 ), Vector2( 0, 0 ) ]
+}
 
 [node name="Main" type="Node2D"]
-position = Vector2( 75, -14 )
+position = Vector2( 75, -19 )
+
+[node name="EixoPassaros" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 475, 133 )
+
+[node name="Passaro1" type="AnimatedSprite" parent="EixoPassaros"]
+editor/display_folded = true
+position = Vector2( -87, -20 )
+frames = SubResource( 35 )
+animation = "voando"
+frame = 1
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EixoPassaros/Passaro1"]
+anims/passaro1_chegando = SubResource( 36 )
+
+[node name="EixoPassaro2" type="Node2D" parent="EixoPassaros"]
+editor/display_folded = true
+position = Vector2( 17, 0 )
+
+[node name="Passaro2" type="AnimatedSprite" parent="EixoPassaros/EixoPassaro2"]
+position = Vector2( 120, -20 )
+frames = SubResource( 35 )
+animation = "voando"
+frame = 1
+playing = true
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EixoPassaros/EixoPassaro2/Passaro2"]
+anims/passaro1_chegando = SubResource( 37 )
+
+[node name="EixoPassaro3" type="Node2D" parent="EixoPassaros"]
+editor/display_folded = true
+position = Vector2( 14, 0 )
+
+[node name="Passaro2" type="AnimatedSprite" parent="EixoPassaros/EixoPassaro3"]
+position = Vector2( -130, -20 )
+frames = SubResource( 35 )
+animation = "voando"
+frame = 1
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EixoPassaros/EixoPassaro3/Passaro2"]
+anims/passaro1_chegando = SubResource( 38 )
+
+[node name="EixoPassaro4" type="Node2D" parent="EixoPassaros"]
+editor/display_folded = true
+position = Vector2( -3, 0 )
+
+[node name="Passaro2" type="AnimatedSprite" parent="EixoPassaros/EixoPassaro4"]
+position = Vector2( 120, -20 )
+frames = SubResource( 35 )
+animation = "voando"
+frame = 1
+playing = true
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EixoPassaros/EixoPassaro4/Passaro2"]
+anims/passaro1_chegando = SubResource( 41 )
+
+[node name="Manager" type="Node2D" parent="." groups=[
+"manager",
+]]
+editor/display_folded = true
+script = ExtResource( 5 )
+interagindo = true
+playerPath = NodePath("../../Main/Passaro")
+parte = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Manager"]
+autoplay = "Intro"
+anims/Intro = SubResource( 11 )
+anims/ato1-2 = SubResource( 12 )
+anims/espingarda_atirando = SubResource( 33 )
+
+[node name="Ato3Ativar" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 479, 209 )
+z_index = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ato3Ativar"]
+shape = SubResource( 34 )
 
 [node name="fundo" type="Sprite" parent="."]
 position = Vector2( 276, 168 )
-texture = ExtResource( 1 )
+texture = ExtResource( 6 )
 
-[node name="porta" type="Sprite" parent="."]
-position = Vector2( -47, 221 )
-texture = ExtResource( 2 )
+[node name="porta" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 3, -2 )
+script = ExtResource( 7 )
+
+[node name="arte" type="Sprite" parent="porta"]
+position = Vector2( -46.5128, 220 )
+scale = Vector2( 1.02564, 1.01031 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="porta"]
+position = Vector2( -40, 287 )
+shape = SubResource( 25 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="porta"]
+anims/anim = SubResource( 26 )
+
+[node name="lixeira" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 140, 281 )
+rotation = 0.00137218
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="lixeira" type="Sprite" parent="lixeira"]
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lixeira"]
+position = Vector2( -0.0123596, -8.99998 )
+shape = SubResource( 24 )
+one_way_collision = true
 
 [node name="janela" type="Node2D" parent="."]
 editor/display_folded = true
-position = Vector2( 422, 120 )
+position = Vector2( 475, 119 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="janela"]
 frames = SubResource( 1 )
+animation = "fechado"
+playing = true
+
+[node name="travaJanela" type="KinematicBody2D" parent="janela"]
+position = Vector2( -1, -3 )
+
+[node name="arte" type="Sprite" parent="janela/travaJanela"]
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="janela/travaJanela"]
+shape = SubResource( 39 )
+
+[node name="trigger" type="Area2D" parent="janela/travaJanela"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="janela/travaJanela/trigger"]
+shape = SubResource( 40 )
+
+[node name="cabo_janela" type="Sprite" parent="janela"]
+position = Vector2( -6, -3 )
+texture = ExtResource( 15 )
+
+[node name="cabo_janela2" type="Sprite" parent="janela"]
+position = Vector2( 3, -3 )
+texture = ExtResource( 15 )
 
 [node name="mesa" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 236, 271 )
+position = Vector2( 263, 265 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="mesa_tras" type="Sprite" parent="mesa"]
 show_behind_parent = true
-texture = ExtResource( 6 )
+texture = ExtResource( 16 )
 
 [node name="mesa_frente" type="Sprite" parent="mesa"]
 z_index = 1
-texture = ExtResource( 7 )
+texture = ExtResource( 17 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mesa"]
 position = Vector2( -0.5327, -20.4965 )
 shape = SubResource( 2 )
+one_way_collision = true
 
-[node name="poltrona" type="Sprite" parent="."]
-position = Vector2( 65, 242.063 )
+[node name="poltrona2" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 69, 240 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="poltrona" type="Sprite" parent="poltrona2"]
 scale = Vector2( 1.4375, 1.4375 )
-texture = ExtResource( 8 )
+texture = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="poltrona2"]
+position = Vector2( 1, 11 )
+shape = SubResource( 28 )
+one_way_collision = true
 
 [node name="estante" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 166, 266 )
+position = Vector2( 198, 263 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="arte" type="Sprite" parent="estante"]
-texture = ExtResource( 9 )
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="estante"]
 position = Vector2( 0, -7 )
 shape = SubResource( 3 )
+one_way_collision = true
+
+[node name="sala" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 277, 301 )
+z_index = -5
+
+[node name="ColorRect" type="ColorRect" parent="sala"]
+margin_left = -348.0
+margin_top = -22.0
+margin_right = 345.0
+margin_bottom = 18.0
+color = Color( 0.478431, 0.376471, 0.270588, 1 )
+
+[node name="chao" type="CollisionShape2D" parent="sala"]
+shape = SubResource( 13 )
+
+[node name="paredeEsq" type="CollisionShape2D" parent="sala"]
+position = Vector2( -330, -137 )
+shape = SubResource( 14 )
+
+[node name="paredeDir" type="CollisionShape2D" parent="sala"]
+position = Vector2( 321, -137 )
+shape = SubResource( 14 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 108, 125 )
+
+[node name="rhino" type="Sprite" parent="KinematicBody2D"]
+texture = ExtResource( 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -5, -15 )
+shape = SubResource( 15 )
+
+[node name="EixoRato" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 106, 99 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rato" type="Area2D" parent="EixoRato"]
+script = ExtResource( 21 )
+
+[node name="arte" type="Sprite" parent="EixoRato/rato"]
+scale = Vector2( -1, 1 )
+texture = ExtResource( 22 )
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EixoRato/rato"]
+shape = SubResource( 16 )
+
+[node name="area-anim-gato" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 75, 219 )
+rotation = 0.00137218
+script = ExtResource( 23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area-anim-gato"]
+position = Vector2( 7, 39 )
+shape = SubResource( 17 )
+
+[node name="EixoEspingarda" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 49, 187 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="espingarda" type="Area2D" parent="EixoEspingarda"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="espingarda" type="Sprite" parent="EixoEspingarda/espingarda"]
+texture = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EixoEspingarda/espingarda"]
+position = Vector2( -19, -2.00002 )
+shape = SubResource( 31 )
+
+[node name="cabideiro" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( -3, 235 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="arte" type="Sprite" parent="cabideiro"]
+texture = ExtResource( 25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cabideiro"]
+position = Vector2( -7, 1 )
+shape = SubResource( 27 )
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="cabideiro"]
+position = Vector2( 7, 22 )
+shape = SubResource( 27 )
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="cabideiro"]
+position = Vector2( 6, -18 )
+shape = SubResource( 27 )
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="cabideiro"]
+position = Vector2( -8, -39 )
+shape = SubResource( 27 )
+one_way_collision = true
+
+[node name="sofa" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 479, 252 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="sofa" type="Sprite" parent="sofa"]
+position = Vector2( 0, -2 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sofa"]
+shape = SubResource( 32 )
+one_way_collision = true
+
+[node name="EixoRelogio" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 314, 282 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="relogio" type="StaticBody2D" parent="EixoRelogio"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="relogio" type="Sprite" parent="EixoRelogio/relogio"]
+position = Vector2( 0, -51 )
+texture = ExtResource( 27 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EixoRelogio/relogio"]
+position = Vector2( 0, -51 )
+shape = SubResource( 30 )
+disabled = true
+
+[node name="NoveloEixo" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 260, 233 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Novelo" type="Area2D" parent="NoveloEixo"]
+position = Vector2( 12.9578, 0 )
+rotation = 0.169509
+script = ExtResource( 28 )
+
+[node name="arte" type="Sprite" parent="NoveloEixo/Novelo"]
+texture = ExtResource( 29 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoveloEixo/Novelo"]
+shape = SubResource( 21 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NoveloEixo/Novelo"]
+anims/cair = SubResource( 23 )
+
+[node name="gato" type="Area2D" parent="."]
+position = Vector2( -117, 282 )
+script = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gato"]
+position = Vector2( -2, 2 )
+shape = SubResource( 18 )
+
+[node name="arte" type="AnimatedSprite" parent="gato"]
+position = Vector2( 0, -1 )
+z_index = -10
+frames = SubResource( 19 )
+animation = "walk"
+frame = 3
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="gato"]
+anims/gato_entra = SubResource( 20 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="gato"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gato/StaticBody2D"]
+position = Vector2( 83, -14 )
+shape = SubResource( 22 )
 
 [node name="Passaro" type="KinematicBody2D" parent="." groups=[
 "player",
 ]]
 editor/display_folded = true
-position = Vector2( 160, 124 )
-script = ExtResource( 10 )
+position = Vector2( 166, 126 )
+script = ExtResource( 40 )
 __meta__ = {
-"_editor_icon": ExtResource( 11 )
+"_editor_icon": ExtResource( 41 )
 }
 acceleration = 1000.0
 deceleration = 1000.0
@@ -373,20 +1398,22 @@ current_maximum_speed = 100.0
 gravity = 300.0
 maximum_fall_speed = 300.0
 jump_speed = -20.0
-inventarioPath = NodePath("../../Main/CanvasLayer/inventario")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Passaro"]
-shape = SubResource( 4 )
+shape = SubResource( 29 )
 
 [node name="Camera2D" type="Camera2D" parent="Passaro"]
 current = true
 zoom = Vector2( 0.5, 0.5 )
 limit_left = 0
 limit_top = 0
+limit_right = 700
+limit_bottom = 300
 drag_margin_left = 0.23
 drag_margin_top = 0.5
 drag_margin_right = 0.31
 drag_margin_bottom = 0.21
+editor_draw_limits = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Passaro"]
 frames = SubResource( 5 )
@@ -395,11 +1422,12 @@ playing = true
 flip_h = true
 
 [node name="GaiolaEixo" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 183, 105 )
 
 [node name="Gaiola" type="StaticBody2D" parent="GaiolaEixo"]
 editor/display_folded = true
-script = ExtResource( 18 )
+script = ExtResource( 44 )
 
 [node name="collisionChao" type="CollisionShape2D" parent="GaiolaEixo/Gaiola"]
 position = Vector2( -3.05176e-005, 29 )
@@ -416,7 +1444,6 @@ shape = SubResource( 8 )
 [node name="collisionDir" type="CollisionShape2D" parent="GaiolaEixo/Gaiola"]
 position = Vector2( 31, 9.00003 )
 shape = SubResource( 8 )
-disabled = true
 
 [node name="area1" type="Area2D" parent="GaiolaEixo/Gaiola"]
 editor/display_folded = true
@@ -437,103 +1464,10 @@ shape = SubResource( 9 )
 anims/shake = SubResource( 10 )
 
 [node name="gaiola2" type="Sprite" parent="GaiolaEixo/Gaiola"]
-texture = ExtResource( 19 )
+texture = ExtResource( 45 )
 
-[node name="Manager" type="Node2D" parent="." groups=[
-"manager",
-]]
-script = ExtResource( 20 )
-playerPath = NodePath("../../Main/Passaro")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Manager"]
-autoplay = "Intro"
-anims/Intro = SubResource( 11 )
-anims/ato1-2 = SubResource( 12 )
-
-[node name="sala" type="StaticBody2D" parent="."]
-position = Vector2( 277, 301 )
-z_index = -5
-
-[node name="ColorRect" type="ColorRect" parent="sala"]
-margin_left = -348.0
-margin_top = -22.0
-margin_right = 345.0
-margin_bottom = 15.0
-color = Color( 0.717647, 0.823529, 0.94902, 1 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sala"]
-shape = SubResource( 13 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="sala"]
-position = Vector2( -330, -137 )
-shape = SubResource( 14 )
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="inventario" type="HBoxContainer" parent="CanvasLayer"]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -63.0
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 71, 95 )
-
-[node name="rhino" type="Sprite" parent="KinematicBody2D"]
-texture = ExtResource( 21 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( -5, -15 )
-shape = SubResource( 15 )
-
-[node name="EixoRato" type="Node2D" parent="."]
-editor/display_folded = true
-position = Vector2( 106, 128 )
-
-[node name="rato" type="Area2D" parent="EixoRato"]
-script = ExtResource( 22 )
-
-[node name="arte" type="Sprite" parent="EixoRato/rato"]
-scale = Vector2( -1, 1 )
-texture = ExtResource( 23 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EixoRato/rato"]
-position = Vector2( 3, 3 )
-shape = SubResource( 16 )
-
-[node name="area-anim-gato" type="Area2D" parent="."]
-editor/display_folded = true
-position = Vector2( 75, 219 )
-script = ExtResource( 24 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="area-anim-gato"]
-position = Vector2( 7, 39 )
-shape = SubResource( 17 )
-
-[node name="gato" type="Area2D" parent="."]
-position = Vector2( -117, 282 )
-script = ExtResource( 25 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="gato"]
-position = Vector2( -2, 5 )
-shape = SubResource( 21 )
-
-[node name="arte" type="AnimatedSprite" parent="gato"]
-frames = SubResource( 19 )
-animation = "deitado"
-playing = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="gato"]
-anims/gato_entra = SubResource( 22 )
-
-[node name="Novelo" type="Area2D" parent="."]
-editor/display_folded = true
-position = Vector2( 247, 239 )
-script = ExtResource( 32 )
-
-[node name="arte" type="Sprite" parent="Novelo"]
-texture = ExtResource( 33 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Novelo"]
-shape = SubResource( 20 )
-
+[connection signal="body_entered" from="Ato3Ativar" to="Manager" method="_on_Ato3Ativar_body_entered"]
+[connection signal="area_entered" from="porta" to="porta" method="_on_porta_area_entered"]
+[connection signal="body_entered" from="porta" to="porta" method="_on_porta_body_entered"]
+[connection signal="body_entered" from="janela/travaJanela/trigger" to="Manager" method="_on_trigger_body_entered"]
+[connection signal="body_entered" from="EixoEspingarda/espingarda" to="Manager" method="_on_espingarda_body_entered"]

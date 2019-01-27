@@ -2,6 +2,7 @@ extends StaticBody2D
 
 var batidas = 0
 var max_batidas = 1
+var batida_velocidade = 90
 
 var manager
 
@@ -18,7 +19,7 @@ func area_enter(b):
 	if(batidas>=max_batidas):
 		return
 	if(b.is_in_group("player")):
-		if(b.current_speed.length()>250):
+		if(b.current_speed.length()>batida_velocidade):
 			
 			$AnimationPlayer.play("shake")
 			batidas += 1

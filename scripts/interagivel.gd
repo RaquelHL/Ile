@@ -4,6 +4,7 @@ class_name Interagivel
 
 var scnDialogo = preload("res://scenes/dialogo.tscn")
 var manager
+var interacao_curta_distancia = 50
 
 var textura
 
@@ -26,17 +27,17 @@ func mouse_exit():
 	foco = false
 	print("saiu")
 	pass
-	
-	
+
 func _input(event):
-	if(event is InputEventMouseButton and foco and event.pressed):
+	if(event is InputEventMouseButton and foco and event.pressed) and not manager.interagindo:
 		print("clicou")
 		var dist = (manager.player.position - self.position).length()
 		print(dist)
-		if(dist<100):
+		if(dist<interacao_curta_distancia):
 			interage_perto()
 		else:
 			interage_longe()
+		
 		get_tree().set_input_as_handled()
 
 func interage_perto():

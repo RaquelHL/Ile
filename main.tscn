@@ -1,78 +1,101 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=55 format=2]
 
-[ext_resource path="res://scripts/godot.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://texturas/mesa_tras.png" type="Texture" id=3]
-[ext_resource path="res://texturas/mesa_frente.png" type="Texture" id=4]
-[ext_resource path="res://texturas/estante.png" type="Texture" id=5]
-[ext_resource path="res://scripts/PlayerController.gd" type="Script" id=6]
-[ext_resource path="res://addons/mgt/icons/icon_player_base.png" type="Texture" id=7]
-[ext_resource path="res://texturas/passaro.png" type="Texture" id=8]
-[ext_resource path="res://texturas/passaro-voa1.png" type="Texture" id=9]
-[ext_resource path="res://texturas/passaro-voa2.png" type="Texture" id=10]
-[ext_resource path="res://texturas/passaro-voa3.png" type="Texture" id=11]
-[ext_resource path="res://scripts/Gaiola.gd" type="Script" id=12]
-[ext_resource path="res://texturas/gaiola2.png" type="Texture" id=13]
-[ext_resource path="res://scripts/Manager.gd" type="Script" id=14]
-[ext_resource path="res://texturas/gaiola.png" type="Texture" id=15]
-[ext_resource path="res://texturas/rhino.png" type="Texture" id=16]
+[ext_resource path="res://texturas/fundo.png" type="Texture" id=1]
+[ext_resource path="res://texturas/porta.png" type="Texture" id=2]
+[ext_resource path="res://texturas/janela1.png" type="Texture" id=3]
+[ext_resource path="res://texturas/janela2.png" type="Texture" id=4]
+[ext_resource path="res://texturas/janela3.png" type="Texture" id=5]
+[ext_resource path="res://texturas/mesa_tras.png" type="Texture" id=6]
+[ext_resource path="res://texturas/mesa_frente.png" type="Texture" id=7]
+[ext_resource path="res://texturas/poltrona.png" type="Texture" id=8]
+[ext_resource path="res://texturas/estante.png" type="Texture" id=9]
+[ext_resource path="res://scripts/PlayerController.gd" type="Script" id=10]
+[ext_resource path="res://addons/mgt/icons/icon_player_base.png" type="Texture" id=11]
+[ext_resource path="res://texturas/passaro.png" type="Texture" id=12]
+[ext_resource path="res://texturas/passaro-anda1.png" type="Texture" id=13]
+[ext_resource path="res://texturas/passaro-anda-2.png" type="Texture" id=14]
+[ext_resource path="res://texturas/passaro-voa1.png" type="Texture" id=15]
+[ext_resource path="res://texturas/passaro-voa2.png" type="Texture" id=16]
+[ext_resource path="res://texturas/passaro-voa3.png" type="Texture" id=17]
+[ext_resource path="res://scripts/Gaiola.gd" type="Script" id=18]
+[ext_resource path="res://texturas/gaiola2.png" type="Texture" id=19]
+[ext_resource path="res://scripts/Manager.gd" type="Script" id=20]
+[ext_resource path="res://texturas/rhino.png" type="Texture" id=21]
+[ext_resource path="res://rato1.gd" type="Script" id=22]
+[ext_resource path="res://texturas/RATO.png" type="Texture" id=23]
+[ext_resource path="res://area-anim-gato.gd" type="Script" id=24]
+[ext_resource path="res://scripts/gato.gd" type="Script" id=25]
+[ext_resource path="res://texturas/gato-idle.png" type="Texture" id=26]
+[ext_resource path="res://texturas/gato-deitado.png" type="Texture" id=27]
+[ext_resource path="res://texturas/gato-anda 1.png" type="Texture" id=28]
+[ext_resource path="res://texturas/gato-anda 2.png" type="Texture" id=29]
+[ext_resource path="res://texturas/gato-anda 3.png" type="Texture" id=30]
+[ext_resource path="res://texturas/gato-anda 4.png" type="Texture" id=31]
+[ext_resource path="res://scripts/novelo.gd" type="Script" id=32]
+[ext_resource path="res://texturas/novelo_de_la.png" type="Texture" id=33]
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="SpriteFrames" id=1]
 
-extents = Vector2( 30, 30 )
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=2]
 
 extents = Vector2( 23.7215, 5.4837 )
 
-[sub_resource type="RectangleShape2D" id=12]
-
-extents = Vector2( 27.0236, 1.02718 )
-
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=3]
 
 extents = Vector2( 31.8793, 1.53268 )
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=4]
 
-radius = 20.7441
-height = 26.0294
+radius = 3.99078
+height = 8.01843
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=5]
 
 animations = [ {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 12 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
 "loop": false,
 "name": "fly",
 "speed": 4.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=3]
-
-extents = Vector2( 123.458, 6.94977 )
-
-[sub_resource type="RectangleShape2D" id=4]
-
-extents = Vector2( 122.603, 3.98529 )
-
-[sub_resource type="RectangleShape2D" id=5]
-
-extents = Vector2( 2.13324, 93.7273 )
-
 [sub_resource type="RectangleShape2D" id=6]
 
-extents = Vector2( 10, 28.7335 )
+extents = Vector2( 31, 1.99995 )
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="RectangleShape2D" id=7]
+
+extents = Vector2( 32, 1.99998 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+extents = Vector2( 1, 23 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+extents = Vector2( 2.99997, 15 )
+
+[sub_resource type="Animation" id=10]
 
 length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("gaiola2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -80,13 +103,44 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 667.833, 3.42477 ), Vector2( 660, 3.425 ), Vector2( 675, 3.425 ), Vector2( 667.833, 3.42477 ) ]
+"update": 1,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 0 ), Vector2( -1, 0 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=11]
 
-resource_name = "ato1-2"
+resource_name = "Intro"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("../EixoRato/rato:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 0.482968, 0.170755 ),
+"update": 0,
+"values": [ Vector2( -71, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("../EixoRato/rato")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "dialogo_introducao"
+} ]
+}
+
+[sub_resource type="Animation" id=12]
+
+length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../Passaro/Camera2D:zoom")
 tracks/0/interp = 1
@@ -97,10 +151,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.8, 0.8 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Gaiola/collisionDir:disabled")
+tracks/1/path = NodePath("../GaiolaEixo/Gaiola/collisionDir:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -112,176 +166,307 @@ tracks/1/keys = {
 "values": [ false, true ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../Gaiola:position")
+tracks/2/path = NodePath("../EixoRato/rato:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 2, 1 ),
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 667.833, 3.42477 ), Vector2( 1154.96, -86.1492 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( -52, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../Gaiola:rotation_degrees")
+tracks/3/path = NodePath("../EixoRato/rato/arte:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 2, 1 ),
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 60.0 ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("../GaiolaEixo/Gaiola:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 45.4966, -0.205043, 21.3187, 0.0638781, 0, 46.5483, -0.0565835, -0.161507, 0.0957568, -0.156506, 45.1711, -0.102286, 0.344311, 0.25, 0, 46.2979, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.398261, 0.603598, 0.873458, 1.38053 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("../GaiolaEixo/Gaiola:position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 13, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("../GaiolaEixo/Gaiola:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 19, -0.25, 0, 0.111428, 0.594278, 19.3943, -0.0979331, -0.0905685, 0.0870516, -0.105663, 18.549, -0.0979331, 0.438999, 0.25, 0, 19.1981, -0.202395, -0.301899, 0.150164, -0.807528 ),
+"times": PoolRealArray( 0, 0.4, 0.628948, 0.855282, 1.33407 )
 }
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=13]
 
-extents = Vector2( 168.998, 3.42703 )
+extents = Vector2( 348, 3.42703 )
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=14]
 
-[node name="godotrobo" type="Area2D" parent="."]
-position = Vector2( 1114.7, 1553.93 )
-script = ExtResource( 1 )
+extents = Vector2( 7, 139 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="godotrobo"]
-shape = SubResource( 10 )
+[sub_resource type="RectangleShape2D" id=15]
 
-[node name="arte" type="Sprite" parent="godotrobo"]
+extents = Vector2( 14, 3 )
+
+[sub_resource type="CircleShape2D" id=16]
+
+radius = 5.80562
+
+[sub_resource type="RectangleShape2D" id=17]
+
+extents = Vector2( 6, 39 )
+
+[sub_resource type="RectangleShape2D" id=21]
+
+extents = Vector2( 15, 10 )
+
+[sub_resource type="SpriteFrames" id=19]
+
+animations = [ {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "deitado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=22]
+
+resource_name = "gato_entra"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -117, 282 ), Vector2( -6, 282 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("arte:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "walk", "deitado" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Manager:interagindo")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="CircleShape2D" id=20]
+
+radius = 7.0
+
+[node name="Main" type="Node2D"]
+position = Vector2( 75, -14 )
+
+[node name="fundo" type="Sprite" parent="."]
+position = Vector2( 276, 168 )
+texture = ExtResource( 1 )
+
+[node name="porta" type="Sprite" parent="."]
+position = Vector2( -47, 221 )
 texture = ExtResource( 2 )
 
+[node name="janela" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 422, 120 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="janela"]
+frames = SubResource( 1 )
+
 [node name="mesa" type="StaticBody2D" parent="."]
-position = Vector2( 922.661, 1096.5 )
-scale = Vector2( 4, 4 )
+editor/display_folded = true
+position = Vector2( 236, 271 )
 
 [node name="mesa_tras" type="Sprite" parent="mesa"]
 show_behind_parent = true
-texture = ExtResource( 3 )
+texture = ExtResource( 6 )
 
 [node name="mesa_frente" type="Sprite" parent="mesa"]
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mesa"]
 position = Vector2( -0.5327, -20.4965 )
-shape = SubResource( 11 )
+shape = SubResource( 2 )
+
+[node name="poltrona" type="Sprite" parent="."]
+position = Vector2( 65, 242.063 )
+scale = Vector2( 1.4375, 1.4375 )
+texture = ExtResource( 8 )
 
 [node name="estante" type="StaticBody2D" parent="."]
-position = Vector2( 478.793, 966.777 )
-scale = Vector2( 8, 8 )
+editor/display_folded = true
+position = Vector2( 166, 266 )
 
 [node name="arte" type="Sprite" parent="estante"]
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="estante"]
-position = Vector2( -0.0230026, 12.4632 )
-shape = SubResource( 12 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="estante"]
-position = Vector2( -0.0230026, -4.49061 )
-shape = SubResource( 12 )
+texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="estante"]
-position = Vector2( -0.0230026, -23.0196 )
-shape = SubResource( 13 )
+position = Vector2( 0, -7 )
+shape = SubResource( 3 )
 
 [node name="Passaro" type="KinematicBody2D" parent="." groups=[
 "player",
 ]]
-position = Vector2( 1144.78, 407.376 )
-script = ExtResource( 6 )
+editor/display_folded = true
+position = Vector2( 160, 124 )
+script = ExtResource( 10 )
 __meta__ = {
-"_editor_icon": ExtResource( 7 )
+"_editor_icon": ExtResource( 11 )
 }
-inventarioPath = NodePath("../CanvasLayer/inventario")
+acceleration = 1000.0
+deceleration = 1000.0
+current_maximum_speed = 100.0
+gravity = 300.0
+maximum_fall_speed = 300.0
+jump_speed = -20.0
+inventarioPath = NodePath("../../Main/CanvasLayer/inventario")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Passaro"]
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="Passaro"]
-position = Vector2( 0, -59.459 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
 limit_left = 0
 limit_top = 0
-drag_margin_left = 0.5
+drag_margin_left = 0.23
 drag_margin_top = 0.5
-drag_margin_right = 0.5
-drag_margin_bottom = 0.5
-editor_draw_drag_margin = true
+drag_margin_right = 0.31
+drag_margin_bottom = 0.21
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Passaro"]
-position = Vector2( 0, -0.277374 )
-scale = Vector2( 4, 4 )
-frames = SubResource( 2 )
+frames = SubResource( 5 )
 animation = "idle"
 playing = true
+flip_h = true
 
-[node name="Gaiola" type="StaticBody2D" parent="."]
+[node name="GaiolaEixo" type="Node2D" parent="."]
+position = Vector2( 183, 105 )
+
+[node name="Gaiola" type="StaticBody2D" parent="GaiolaEixo"]
 editor/display_folded = true
-position = Vector2( 667.833, 3.42477 )
-script = ExtResource( 12 )
+script = ExtResource( 18 )
 
-[node name="collisionChao" type="CollisionShape2D" parent="Gaiola"]
-position = Vector2( 465.146, 443.838 )
-shape = SubResource( 3 )
-
-[node name="collisionTeto" type="CollisionShape2D" parent="Gaiola"]
-position = Vector2( 464.393, 271.734 )
-shape = SubResource( 4 )
-
-[node name="collisionEsq" type="CollisionShape2D" parent="Gaiola"]
-position = Vector2( 343.019, 356.877 )
-shape = SubResource( 5 )
-
-[node name="collisionDir" type="CollisionShape2D" parent="Gaiola"]
-position = Vector2( 586.879, 357.205 )
-shape = SubResource( 5 )
-
-[node name="area1" type="Area2D" parent="Gaiola"]
-position = Vector2( 352.717, 404.542 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gaiola/area1"]
+[node name="collisionChao" type="CollisionShape2D" parent="GaiolaEixo/Gaiola"]
+position = Vector2( -3.05176e-005, 29 )
 shape = SubResource( 6 )
 
-[node name="area2" type="Area2D" parent="Gaiola"]
-position = Vector2( 576.836, 404.159 )
+[node name="collisionTeto" type="CollisionShape2D" parent="GaiolaEixo/Gaiola"]
+position = Vector2( -3.05176e-005, -16 )
+shape = SubResource( 7 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gaiola/area2"]
-shape = SubResource( 6 )
+[node name="collisionEsq" type="CollisionShape2D" parent="GaiolaEixo/Gaiola"]
+position = Vector2( -31, 9 )
+shape = SubResource( 8 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Gaiola"]
-anims/shake = SubResource( 7 )
+[node name="collisionDir" type="CollisionShape2D" parent="GaiolaEixo/Gaiola"]
+position = Vector2( 31, 9.00003 )
+shape = SubResource( 8 )
+disabled = true
 
-[node name="gaiola2" type="Sprite" parent="Gaiola"]
-position = Vector2( 464.904, 322.282 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 13 )
+[node name="area1" type="Area2D" parent="GaiolaEixo/Gaiola"]
+editor/display_folded = true
+position = Vector2( -33, 3.99997 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GaiolaEixo/Gaiola/area1"]
+position = Vector2( 3.99997, 13 )
+shape = SubResource( 9 )
+
+[node name="area2" type="Area2D" parent="GaiolaEixo/Gaiola"]
+editor/display_folded = true
+position = Vector2( 29, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GaiolaEixo/Gaiola/area2"]
+shape = SubResource( 9 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GaiolaEixo/Gaiola"]
+anims/shake = SubResource( 10 )
+
+[node name="gaiola2" type="Sprite" parent="GaiolaEixo/Gaiola"]
+texture = ExtResource( 19 )
 
 [node name="Manager" type="Node2D" parent="." groups=[
 "manager",
 ]]
-editor/display_folded = true
-script = ExtResource( 14 )
-playerPath = NodePath("../Passaro")
+script = ExtResource( 20 )
+playerPath = NodePath("../../Main/Passaro")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Manager"]
-anims/ato1-2 = SubResource( 8 )
+autoplay = "Intro"
+anims/Intro = SubResource( 11 )
+anims/ato1-2 = SubResource( 12 )
 
 [node name="sala" type="StaticBody2D" parent="."]
-position = Vector2( 1143.36, 628.316 )
-scale = Vector2( 9.09486, 10.3996 )
+position = Vector2( 277, 301 )
+z_index = -5
 
-[node name="arte" type="Sprite" parent="sala"]
-position = Vector2( 47.5916, 0.00571677 )
-scale = Vector2( 1.38073, 1.00009 )
-texture = ExtResource( 15 )
+[node name="ColorRect" type="ColorRect" parent="sala"]
+margin_left = -348.0
+margin_top = -22.0
+margin_right = 345.0
+margin_bottom = 15.0
+color = Color( 0.717647, 0.823529, 0.94902, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sala"]
-position = Vector2( 47.1567, 58.3756 )
-shape = SubResource( 9 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="sala"]
+position = Vector2( -330, -137 )
+shape = SubResource( 14 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -289,10 +474,66 @@ shape = SubResource( 9 )
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -64.0
+margin_top = -63.0
 
-[node name="rhino" type="Sprite" parent="."]
-position = Vector2( 504.25, 473.242 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 16 )
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 71, 95 )
+
+[node name="rhino" type="Sprite" parent="KinematicBody2D"]
+texture = ExtResource( 21 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -5, -15 )
+shape = SubResource( 15 )
+
+[node name="EixoRato" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 106, 128 )
+
+[node name="rato" type="Area2D" parent="EixoRato"]
+script = ExtResource( 22 )
+
+[node name="arte" type="Sprite" parent="EixoRato/rato"]
+scale = Vector2( -1, 1 )
+texture = ExtResource( 23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EixoRato/rato"]
+position = Vector2( 3, 3 )
+shape = SubResource( 16 )
+
+[node name="area-anim-gato" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 75, 219 )
+script = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area-anim-gato"]
+position = Vector2( 7, 39 )
+shape = SubResource( 17 )
+
+[node name="gato" type="Area2D" parent="."]
+position = Vector2( -117, 282 )
+script = ExtResource( 25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gato"]
+position = Vector2( -2, 5 )
+shape = SubResource( 21 )
+
+[node name="arte" type="AnimatedSprite" parent="gato"]
+frames = SubResource( 19 )
+animation = "deitado"
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="gato"]
+anims/gato_entra = SubResource( 22 )
+
+[node name="Novelo" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 247, 239 )
+script = ExtResource( 32 )
+
+[node name="arte" type="Sprite" parent="Novelo"]
+texture = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Novelo"]
+shape = SubResource( 20 )
 

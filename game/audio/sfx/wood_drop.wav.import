@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wood_drop.wav-78c2df02719949a135a20bdd110b8dba.sample"
+
+[deps]
+
+source_file="res://game/audio/sfx/wood_drop.wav"
+dest_files=[ "res://.import/wood_drop.wav-78c2df02719949a135a20bdd110b8dba.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

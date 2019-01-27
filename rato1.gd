@@ -23,6 +23,7 @@ func dialogo_introducao():
 	
 	dialogo.falas = falas
 	dialogo.play()
+	config.playRatSqueaking()
 	"""var dialogo = scnDialogo.instance()
 	var falas = [
 		

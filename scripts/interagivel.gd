@@ -6,6 +6,8 @@ var scnDialogo = preload("res://scenes/dialogo.tscn")
 var manager
 var interacao_curta_distancia = 50
 
+onready var config = get_node("/root/config")
+
 var textura
 
 var foco = false
@@ -38,6 +40,7 @@ func _input(event):
 		else:
 			interage_longe()
 		
+		config.playClick()
 		get_tree().set_input_as_handled()
 
 func interage_perto():

@@ -2,6 +2,7 @@ extends Interagivel
 
 var fala_parte = 0
 
+
 func interage_longe():
 	pass
 
@@ -14,11 +15,13 @@ func interage_perto():
 			falas = [
 				dialogo.Fala.new(self, "Miau...")
 			]
+			config.playCatMeow()
 			fala_parte = 1
 		elif fala_parte == 1:
 			falas = [
 				dialogo.Fala.new(self, "MI AU..."),
 			]
+			config.playCatMeow()
 			fala_parte = 2
 		elif fala_parte == 2:
 			falas = [

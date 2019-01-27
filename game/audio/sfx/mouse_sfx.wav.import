@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mouse_sfx.wav-1dac413fbd3f13a1d01b991271fcd3a1.sample"
+
+[deps]
+
+source_file="res://game/audio/sfx/mouse_sfx.wav"
+dest_files=[ "res://.import/mouse_sfx.wav-1dac413fbd3f13a1d01b991271fcd3a1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

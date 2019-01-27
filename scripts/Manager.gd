@@ -5,12 +5,26 @@ var ato = 1
 export(NodePath) var playerPath
 var player
 
+onready var config = get_node("/root/config")
+
 var passaro_final_count = 0
 
 export var parte = 1 setget set_parte
 
+var modalCredito = preload("res://game/scene/inCreditos.tscn")
+
 func _ready():
 	player = get_node(playerPath)
+	config.music = get_parent().get_node("OST")
+	config.click = get_parent().get_node("Click")
+	config.jump = get_parent().get_node("Jump")
+	config.cat_meow = get_parent().get_node("catMeow")
+	config.rat_squeaking = get_parent().get_node("ratSqueak")
+	config.open_door = get_parent().get_node("openDoor")
+	config.chain = get_parent().get_node("chain")
+	config.wood_drop = get_parent().get_node("woodDrop")
+	config.victory = get_parent().get_node("victory")
+	config.shot = get_parent().get_node("shot")
 	muda_ato()
 
 func muda_ato():
@@ -18,6 +32,7 @@ func muda_ato():
 		1:
 			player.acceleration = 150
 			player.jump_speed = -100
+			config.playMusic()
 		2:
 			player.acceleration = 1000
 			player.jump_speed = -200
@@ -54,3 +69,19 @@ func _on_trigger_body_entered(body):
 	
 	passaro_final_count += 1
 	pass
+
+func play_door():
+	config.playOpenDoor()
+	
+func play_shot():
+	config.playShot()
+	
+func playDrop():
+	config.playWoodDrop()
+	
+func playVictory():
+	config.playVictory()
+	
+func callCreditos():
+	config.stateGame = 4
+	get_tree().change_scene("res://game/scene/inCreditos.tscn")

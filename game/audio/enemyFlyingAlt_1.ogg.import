@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/enemyFlyingAlt_1.ogg-9cc9db376f197393e622704f30b2346b.oggstr"
+
+[deps]
+
+source_file="res://game/audio/enemyFlyingAlt_1.ogg"
+dest_files=[ "res://.import/enemyFlyingAlt_1.ogg-9cc9db376f197393e622704f30b2346b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

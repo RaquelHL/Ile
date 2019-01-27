@@ -6,6 +6,7 @@ var pode_voar = false
 var ultimo_pulo = 0
 var pulo_cooldown = 400
 onready var manager = $'/root/Main/Manager'
+onready var config = get_node("/root/config")
 
 var inventario
 var itens = []
@@ -25,6 +26,7 @@ func _physics_process(delta):
 			jump_just_pressed = true
 			$AnimatedSprite.play("fly")
 			$AnimatedSprite.frame = 0
+			config.playShot()
 		else:
 			jump_just_pressed = false
 	

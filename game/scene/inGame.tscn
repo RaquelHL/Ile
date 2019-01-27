@@ -5,7 +5,6 @@
 [ext_resource path="res://game/images/buttons/button_pause_normal.png" type="Texture" id=3]
 [ext_resource path="res://game/images/buttons/button_pause_click.png" type="Texture" id=4]
 
-
 [node name="MarginContainer" type="MarginContainer"]
 margin_right = 480.0
 margin_bottom = 270.0

@@ -51,7 +51,7 @@ func set_parte(p):
 	print("parte:", p)
 
 func _on_Ato3Ativar_body_entered(body):
-	if body.is_in_group('player'):
+	if body.is_in_group('player') and ato == 2:
 		ato = 3
 		muda_ato()
 		pass
